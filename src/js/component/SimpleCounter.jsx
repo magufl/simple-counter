@@ -6,16 +6,16 @@ export const Counter = () => {
     const [isRunning, setIsRunning] = useState(false)
     const [status, setStatus] = useState({
         title: 'Clock',
-        icon: "fa fa-clock",
-        titleStyles: 'text-primary'
+        icon: "fa fa-clock d-flex justify-content-center",
+        titleStyles: 'text-primary d-flex justify-content-center'
     })
 
     const handleStart = () => {
         setIsRunning(!isRunning)
             setStatus({
                 title: 'Chronometer',
-                icon: "fas fa-stopwatch",
-                titleStyles: 'text-success',
+                icon: "fas fa-stopwatch d-flex justify-content-center",
+                titleStyles: 'text-success d-flex justify-content-center',
             })
     }
 
@@ -24,8 +24,8 @@ export const Counter = () => {
         setIsRunning(false);
         setStatus({
             title: 'Clock',
-            icon: "fa fa-clock",
-            titleStyles: 'text-primary'
+            icon: "fa fa-clock d-flex justify-content-center",
+            titleStyles: 'text-primary d-flex justify-content-center'
         })
     }
 
@@ -42,7 +42,7 @@ export const Counter = () => {
 
     return (
         <div className="container" >
-            <h1>Simple Counter</h1>
+            <h1 className="d-flex justify-content-center">Simple Counter</h1>
             <h2 className={status.titleStyles}>{status.title}</h2>
             <div className="big-counter">
                 <div><i className={status.icon}></i></div>
